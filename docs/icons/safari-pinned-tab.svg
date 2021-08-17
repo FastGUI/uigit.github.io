@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-6);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="425.765" y1="243.844" x2="425.765" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5e8e2c"/>
+      <stop offset="0.011" stop-color="#5e8e2c"/>
+      <stop offset="1" stop-color="#c0ef1c"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="582.469" y1="243" x2="582.469" y2="68" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="916.875" y1="570.153" x2="77.594" y2="644.91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c0ef1c"/>
+      <stop offset="0.465" stop-color="#5e8e2c"/>
+      <stop offset="1" stop-color="#c0ef1c"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="492.5" y1="971.719" x2="492.5" y2="507.594" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#154e9b"/>
+      <stop offset="0.573" stop-color="#9fc4f7"/>
+      <stop offset="1" stop-color="#1b63c2"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="492.453" y1="780.094" x2="492.453" y2="413.781" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="519.562" y1="703.656" x2="519.562" y2="490.219" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7d4819"/>
+      <stop offset="0.482" stop-color="#7d4819"/>
+      <stop offset="1" stop-color="#dd9132"/>
+    </linearGradient>
+  </defs>
+  <path id="形状_1" data-name="形状 1" class="cls-1" d="M371,76l41-46s84.139,82.492,66,207c-2.5,11.563-11.3,7.28-13-4S441.374,107.712,371,76Z"/>
+  <path id="形状_2" data-name="形状 2" class="cls-2" d="M508,239S482.429,98.033,657,68c0,0,24.741,141.11-146,175Z"/>
+  <path id="形状_3" data-name="形状 3" class="cls-3" d="M340,247s75.182,10.8,114,30,59.891,17.475,103-3,138.955-61.63,233,12S936.548,425.418,910,624C867.448,821.99,743.2,954.693,687,966s-92.967-23.474-135-29-54.133-20.182-96-4-105.716,46.443-154,36S67.909,730.484,78,519,267.083,243.875,340,247Z"/>
+  <path id="形状_5" data-name="形状 5" class="cls-4" d="M78,548S73.415,777.784,282,959c51.871,32.291,123.392-5.783,148-17s63.691-30.586,137,5c36.8,19.288,109.282,27.8,135,17,44.56-18.707,190.594-172.156,205-333,0,0-228.807-131.751-251-123,0,0,36.67,58.73,11,146-68.363,184.878-357.176,163.57-564-77Z"/>
+  <path id="形状_4" data-name="形状 4" class="cls-5" d="M78,547S263.992,687.276,350,700c0,0-53.643-82.369-19-176,23.481-59.838,179.785-264.557,576,107,0,0-220.935-124.379-247-113,0,0,55.1,107.664-37,205-146.9,138.6-387.036-6.334-482-106C72.544,545.155,78,547,78,547Z"/>
+  <path id="多边形_1" data-name="多边形 1" class="cls-6" d="M594.325,594.6L446.976,703.642l-2.169-213.416Z"/>
+</svg>

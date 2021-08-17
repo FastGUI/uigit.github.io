@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>控制器 | 苹果cmsV10</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="苹果cms插件中的控制器和ThinkPHP5的控制器类似，请查看ThinkPHP5控制器章节。">
+    <meta name="keywords" content="苹果cms控制器,ThinkPHP5,基类,苹果cms">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.9e97db6a.css" as="style"><link rel="preload" href="/assets/js/app.e58eea56.js" as="script"><link rel="preload" href="/assets/js/5.29a4c170.js" as="script"><link rel="preload" href="/assets/js/4.9ebf53b1.js" as="script"><link rel="preload" href="/assets/js/35.953c40a1.js" as="script"><link rel="preload" href="/assets/js/8.a78a9654.js" as="script"><link rel="prefetch" href="/assets/js/10.6b1fb4c4.js"><link rel="prefetch" href="/assets/js/100.03c95089.js"><link rel="prefetch" href="/assets/js/101.696809f1.js"><link rel="prefetch" href="/assets/js/102.f68e4309.js"><link rel="prefetch" href="/assets/js/103.ff86f26b.js"><link rel="prefetch" href="/assets/js/104.fa6c6523.js"><link rel="prefetch" href="/assets/js/105.a5484a46.js"><link rel="prefetch" href="/assets/js/106.405879e0.js"><link rel="prefetch" href="/assets/js/107.1ba81a97.js"><link rel="prefetch" href="/assets/js/108.1a541803.js"><link rel="prefetch" href="/assets/js/109.315bfc9a.js"><link rel="prefetch" href="/assets/js/11.a1ff2cf2.js"><link rel="prefetch" href="/assets/js/12.655dd338.js"><link rel="prefetch" href="/assets/js/13.bfef087b.js"><link rel="prefetch" href="/assets/js/14.41035e8f.js"><link rel="prefetch" href="/assets/js/15.d9df4c0e.js"><link rel="prefetch" href="/assets/js/16.554ab8a9.js"><link rel="prefetch" href="/assets/js/17.7163bf50.js"><link rel="prefetch" href="/assets/js/18.d336344d.js"><link rel="prefetch" href="/assets/js/19.ba77670c.js"><link rel="prefetch" href="/assets/js/20.caae876a.js"><link rel="prefetch" href="/assets/js/21.922edc5b.js"><link rel="prefetch" href="/assets/js/22.23c1d2f4.js"><link rel="prefetch" href="/assets/js/23.9e7a5763.js"><link rel="prefetch" href="/assets/js/24.d5601925.js"><link rel="prefetch" href="/assets/js/25.86a37e2a.js"><link rel="prefetch" href="/assets/js/26.ada967b3.js"><link rel="prefetch" href="/assets/js/27.a00c1087.js"><link rel="prefetch" href="/assets/js/28.bf893a3b.js"><link rel="prefetch" href="/assets/js/29.b2c0edb9.js"><link rel="prefetch" href="/assets/js/30.f03db177.js"><link rel="prefetch" href="/assets/js/31.034d28eb.js"><link rel="prefetch" href="/assets/js/32.67ef374e.js"><link rel="prefetch" href="/assets/js/33.c29034f0.js"><link rel="prefetch" href="/assets/js/34.d529ba85.js"><link rel="prefetch" href="/assets/js/36.02f0de0d.js"><link rel="prefetch" href="/assets/js/37.ee635b54.js"><link rel="prefetch" href="/assets/js/38.8d51470b.js"><link rel="prefetch" href="/assets/js/39.a580ca3b.js"><link rel="prefetch" href="/assets/js/40.d1b63bee.js"><link rel="prefetch" href="/assets/js/41.5d130e8f.js"><link rel="prefetch" href="/assets/js/42.80b0e85a.js"><link rel="prefetch" href="/assets/js/43.abf40ae0.js"><link rel="prefetch" href="/assets/js/44.9296494e.js"><link rel="prefetch" href="/assets/js/45.ee2c4a5b.js"><link rel="prefetch" href="/assets/js/46.09e7c3d3.js"><link rel="prefetch" href="/assets/js/47.b961b47d.js"><link rel="prefetch" href="/assets/js/48.c7027d50.js"><link rel="prefetch" href="/assets/js/49.692eb5dc.js"><link rel="prefetch" href="/assets/js/50.96877bf8.js"><link rel="prefetch" href="/assets/js/51.789b91a0.js"><link rel="prefetch" href="/assets/js/52.bc15bde0.js"><link rel="prefetch" href="/assets/js/53.fc67e547.js"><link rel="prefetch" href="/assets/js/54.a500f3e7.js"><link rel="prefetch" href="/assets/js/55.7bd304fd.js"><link rel="prefetch" href="/assets/js/56.1895b188.js"><link rel="prefetch" href="/assets/js/57.d0a45b0b.js"><link rel="prefetch" href="/assets/js/58.eb831659.js"><link rel="prefetch" href="/assets/js/59.7b69914f.js"><link rel="prefetch" href="/assets/js/6.a9fa4fee.js"><link rel="prefetch" href="/assets/js/60.f91a7c7a.js"><link rel="prefetch" href="/assets/js/61.2edf645c.js"><link rel="prefetch" href="/assets/js/62.74627f26.js"><link rel="prefetch" href="/assets/js/63.5616d503.js"><link rel="prefetch" href="/assets/js/64.97ad9a68.js"><link rel="prefetch" href="/assets/js/65.c30ac4e2.js"><link rel="prefetch" href="/assets/js/66.92161f68.js"><link rel="prefetch" href="/assets/js/67.015390fd.js"><link rel="prefetch" href="/assets/js/68.f59ba4ab.js"><link rel="prefetch" href="/assets/js/69.cce46e3d.js"><link rel="prefetch" href="/assets/js/7.8fcade3c.js"><link rel="prefetch" href="/assets/js/70.f1d9927e.js"><link rel="prefetch" href="/assets/js/71.f98067c3.js"><link rel="prefetch" href="/assets/js/72.d40a4594.js"><link rel="prefetch" href="/assets/js/73.2ab5a32e.js"><link rel="prefetch" href="/assets/js/74.d8188538.js"><link rel="prefetch" href="/assets/js/75.98f03565.js"><link rel="prefetch" href="/assets/js/76.b9bd34f7.js"><link rel="prefetch" href="/assets/js/77.22caaf17.js"><link rel="prefetch" href="/assets/js/78.0fb52d3c.js"><link rel="prefetch" href="/assets/js/79.ec478792.js"><link rel="prefetch" href="/assets/js/80.f65d4da1.js"><link rel="prefetch" href="/assets/js/81.83bb8fe2.js"><link rel="prefetch" href="/assets/js/82.0ef7562a.js"><link rel="prefetch" href="/assets/js/83.794b2557.js"><link rel="prefetch" href="/assets/js/84.b16b7ac0.js"><link rel="prefetch" href="/assets/js/85.5795dae6.js"><link rel="prefetch" href="/assets/js/86.ec5d009b.js"><link rel="prefetch" href="/assets/js/87.8013d815.js"><link rel="prefetch" href="/assets/js/88.842959bf.js"><link rel="prefetch" href="/assets/js/89.c2de1543.js"><link rel="prefetch" href="/assets/js/9.98029025.js"><link rel="prefetch" href="/assets/js/90.cd6f428e.js"><link rel="prefetch" href="/assets/js/91.cbd16a63.js"><link rel="prefetch" href="/assets/js/92.1cfcc965.js"><link rel="prefetch" href="/assets/js/93.743809be.js"><link rel="prefetch" href="/assets/js/94.a6b2a489.js"><link rel="prefetch" href="/assets/js/95.16c48846.js"><link rel="prefetch" href="/assets/js/96.5f8183b2.js"><link rel="prefetch" href="/assets/js/97.20f56faa.js"><link rel="prefetch" href="/assets/js/98.7e03e271.js"><link rel="prefetch" href="/assets/js/99.9a823734.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.2b48bf23.js"><link rel="prefetch" href="/assets/js/vendors~notification.14a64265.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9e97db6a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">苹果cmsV10</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/plugin/" class="nav-link router-link-active">
+  插件
+</a></div><div class="nav-item"><a href="/theme/" class="nav-link">
+  模板
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="了解更多" class="mobile-dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/api/collect.html" class="nav-link">
+  采集接口
+</a></li><li class="dropdown-subitem"><a href="/api/web-design.html" class="nav-link">
+  前端接口
+</a></li></ul></li><li class="dropdown-item"><h4>
+          站长手册
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webmaster/template.html" class="nav-link">
+  买模板
+</a></li><li class="dropdown-subitem"><a href="/webmaster/server.html" class="nav-link">
+  服务器
+</a></li><li class="dropdown-subitem"><a href="/webmaster/ads.html" class="nav-link">
+  广告联盟
+</a></li><li class="dropdown-subitem"><a href="/faq/" class="nav-link">
+  常见问题
+</a></li><li class="dropdown-subitem"><a href="/webmaster/glossary.html" class="nav-link">
+  行业术语
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webmaster/migration-guide.html" class="nav-link">
+  其他cms转苹果cms
+</a></li><li class="dropdown-subitem"><a href="/webmaster/transfer.html" class="nav-link">
+  网站搬家
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="v10.x" class="dropdown-title"><span class="title">v10.x</span> <span class="arrow down"></span></button> <button type="button" aria-label="v10.x" class="mobile-dropdown-title"><span class="title">v10.x</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link">
+  v10.x
+</a></li><li class="dropdown-item"><!----> <a href="https://www.maccms.la/doc/v8/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  v8.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="选择语言" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="选择语言" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/plugin/plugin-controller.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/tc/plugin/plugin-controller.html" class="nav-link">
+  繁體中文
+</a></li></ul></div></div> <a href="https://github.com/magicblack/maccms10" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/plugin/" class="nav-link router-link-active">
+  插件
+</a></div><div class="nav-item"><a href="/theme/" class="nav-link">
+  模板
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="了解更多" class="mobile-dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/api/collect.html" class="nav-link">
+  采集接口
+</a></li><li class="dropdown-subitem"><a href="/api/web-design.html" class="nav-link">
+  前端接口
+</a></li></ul></li><li class="dropdown-item"><h4>
+          站长手册
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webmaster/template.html" class="nav-link">
+  买模板
+</a></li><li class="dropdown-subitem"><a href="/webmaster/server.html" class="nav-link">
+  服务器
+</a></li><li class="dropdown-subitem"><a href="/webmaster/ads.html" class="nav-link">
+  广告联盟
+</a></li><li class="dropdown-subitem"><a href="/faq/" class="nav-link">
+  常见问题
+</a></li><li class="dropdown-subitem"><a href="/webmaster/glossary.html" class="nav-link">
+  行业术语
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webmaster/migration-guide.html" class="nav-link">
+  其他cms转苹果cms
+</a></li><li class="dropdown-subitem"><a href="/webmaster/transfer.html" class="nav-link">
+  网站搬家
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="v10.x" class="dropdown-title"><span class="title">v10.x</span> <span class="arrow down"></span></button> <button type="button" aria-label="v10.x" class="mobile-dropdown-title"><span class="title">v10.x</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link">
+  v10.x
+</a></li><li class="dropdown-item"><!----> <a href="https://www.maccms.la/doc/v8/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  v8.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="选择语言" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="选择语言" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/plugin/plugin-controller.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/tc/plugin/plugin-controller.html" class="nav-link">
+  繁體中文
+</a></li></ul></div></div> <a href="https://github.com/magicblack/maccms10" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>插件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/plugin/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/plugin/plugin-dir.html" class="sidebar-link">插件目录</a></li><li><a href="/plugin/plugin-writing.html" class="sidebar-link">开发插件</a></li><li><a href="/plugin/plugin-model.html" class="sidebar-link">模型</a></li><li><a href="/plugin/plugin-controller.html" aria-current="page" class="active sidebar-link">控制器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/plugin/plugin-controller.html#基类不同" class="sidebar-link">基类不同</a></li><li class="sidebar-sub-header"><a href="/plugin/plugin-controller.html#请求url不同" class="sidebar-link">请求URL不同</a></li><li class="sidebar-sub-header"><a href="/plugin/plugin-controller.html#当使用层级控制器时" class="sidebar-link">当使用层级控制器时</a></li><li class="sidebar-sub-header"><a href="/plugin/plugin-controller.html#控制器定义" class="sidebar-link">控制器定义</a></li><li class="sidebar-sub-header"><a href="/plugin/plugin-controller.html#控制器请求" class="sidebar-link">控制器请求</a></li><li class="sidebar-sub-header"><a href="/plugin/plugin-controller.html#基类控制器" class="sidebar-link">基类控制器</a></li><li class="sidebar-sub-header"><a href="/plugin/plugin-controller.html#基类属性" class="sidebar-link">基类属性</a></li></ul></li><li><a href="/plugin/plugin-extend.html" class="sidebar-link">模块预留扩展</a></li><li><a href="/plugin/plugin-function.html" class="sidebar-link">内置函数</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>官方插件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/plugin/official/plugin-ppvod-maccms.html" class="sidebar-link">云转码（PPVOD）插件</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="控制器"><a href="#控制器" class="header-anchor">#</a> 控制器</h1> <p><code>苹果cms</code>插件中的控制器和<code>ThinkPHP5</code>的控制器类似，请查看<code>ThinkPHP5</code>控制器章节</p> <ul><li>请参考：<a href="https://www.kancloud.cn/manual/thinkphp5/118047" target="_blank" rel="noopener noreferrer">thinkphp5控制器<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <div class="custom-block tip"><p class="custom-block-title">特别提醒</p> <p>苹果cms 插件控制器和<code>ThinkPHP5</code>控制器不同之处主要有以下几点</p></div> <h2 id="基类不同"><a href="#基类不同" class="header-anchor">#</a> 基类不同</h2> <ul><li>插件控制器基类为：<code>\think\addons\Controller</code></li> <li>ThinkPHP5控制器基类为：<code>\think\Controller</code></li></ul> <h2 id="请求url不同"><a href="#请求url不同" class="header-anchor">#</a> 请求URL不同</h2> <ul><li>插件控制器请求方法为：<code>http://www.da.com/addons/mydemo/控制器名/方法</code></li> <li>ThinkPHP5控制器请求方法为：<code>http://www.da.com/模块名/控制器名/方法</code></li></ul> <h2 id="当使用层级控制器时"><a href="#当使用层级控制器时" class="header-anchor">#</a> 当使用层级控制器时</h2> <ul><li>插件控制器请求方法为：<code>http://www.da.com/addons/mydemo/目录名.控制器名/方法</code></li> <li>ThinkPHP5控制器请求方法为：<code>http://www.da.com/模块名/目录名.控制器名/方法</code></li> <li>插件控制器必须继承<code>\think\addons\Controller</code>这个基类控制器。</li></ul> <h2 id="控制器定义"><a href="#控制器定义" class="header-anchor">#</a> 控制器定义</h2> <p>一个典型的控制器代码如下：</p> <div class="language-php line-numbers-mode"><pre class="language-php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">namespace</span> <span class="token package">addons<span class="token punctuation">\</span>mydemo<span class="token punctuation">\</span>controller</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">think<span class="token punctuation">\</span>addons<span class="token punctuation">\</span>Controller</span><span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">Index</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string double-quoted-string">&quot;当前插件暂无前台页面&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</span></code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><ul><li>其文件位置位于<code>addons/mydemo/Index.php</code>。</li></ul> <h2 id="控制器请求"><a href="#控制器请求" class="header-anchor">#</a> 控制器请求</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>http://www.da.com/addons/mydemo/控制器名/控制器方法
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="基类控制器"><a href="#基类控制器" class="header-anchor">#</a> 基类控制器</h2> <ul><li><p>苹果cms 的基类控制器<code>\think\addons\Controller</code>位于<code>vendor/karsonzhang/fastadmin-addons/src/addons/Controller.php</code>。</p></li> <li><p>基类控制器是FastAdmin插件系统的一部分，在基类控制器进行了一系列的操作，包括插件控制器权限检查、语言包加载、布局设定、配置加载等操作。</p></li> <li><p>同时基类控制器也是继承自<code>\think\Controller</code>，此控制器基类是ThinkPHP5自带的基类控制器，因此也可以实现绝大多数<code>ThinkPHP5</code>官方文档控制器章节的功能。</p></li></ul> <h2 id="基类属性"><a href="#基类属性" class="header-anchor">#</a> 基类属性</h2> <div class="language-php line-numbers-mode"><pre class="language-php"><code><span class="token keyword">protected</span> <span class="token variable">$addon</span> <span class="token operator">=</span> <span class="token constant">null</span><span class="token punctuation">;</span> <span class="token comment">//插件名称</span>
+<span class="token keyword">protected</span> <span class="token variable">$controller</span> <span class="token operator">=</span> <span class="token constant">null</span><span class="token punctuation">;</span> <span class="token comment">//控制器名称</span>
+<span class="token keyword">protected</span> <span class="token variable">$action</span> <span class="token operator">=</span> <span class="token constant">null</span><span class="token punctuation">;</span> <span class="token comment">//方法名称</span>
+<span class="token comment">/**
+ * 无需登录的方法,同时也就不需要鉴权了
+ * @var array
+ */</span>
+<span class="token keyword">protected</span> <span class="token variable">$noNeedLogin</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'*'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">/**
+ * 无需鉴权的方法,但需要登录
+ * @var array
+ */</span>
+<span class="token keyword">protected</span> <span class="token variable">$noNeedRight</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'*'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">/**
+ * 权限Auth，如果用户是登录状态，可以直接从中读取用户信息
+ * @var Auth
+ */</span>
+<span class="token keyword">protected</span> <span class="token variable">$auth</span> <span class="token operator">=</span> <span class="token constant">null</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * 布局模板，默认不启用
+ * @var string
+ */</span>
+<span class="token keyword">protected</span> <span class="token variable">$layout</span> <span class="token operator">=</span> <span class="token constant">null</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/plugin/plugin-model.html" class="prev">
+        模型
+      </a></span> <span class="next"><a href="/plugin/plugin-extend.html">
+        模块预留扩展
+      </a>
+      →
+    </span></p></div> <div class="bsa-cpc-wrapper"><div class="bsa-cpc"></div></div></main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.e58eea56.js" defer></script><script src="/assets/js/5.29a4c170.js" defer></script><script src="/assets/js/4.9ebf53b1.js" defer></script><script src="/assets/js/35.953c40a1.js" defer></script><script src="/assets/js/8.a78a9654.js" defer></script>
+  </body>
+</html>

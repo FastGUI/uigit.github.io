@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>从其他cms迁移苹果cms | 苹果cmsV10</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="基于ThinkPHP和Layui的多功能开源免费内容管理系统">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.9e97db6a.css" as="style"><link rel="preload" href="/assets/js/app.e58eea56.js" as="script"><link rel="preload" href="/assets/js/5.29a4c170.js" as="script"><link rel="preload" href="/assets/js/4.9ebf53b1.js" as="script"><link rel="preload" href="/assets/js/105.a5484a46.js" as="script"><link rel="preload" href="/assets/js/8.a78a9654.js" as="script"><link rel="prefetch" href="/assets/js/10.6b1fb4c4.js"><link rel="prefetch" href="/assets/js/100.03c95089.js"><link rel="prefetch" href="/assets/js/101.696809f1.js"><link rel="prefetch" href="/assets/js/102.f68e4309.js"><link rel="prefetch" href="/assets/js/103.ff86f26b.js"><link rel="prefetch" href="/assets/js/104.fa6c6523.js"><link rel="prefetch" href="/assets/js/106.405879e0.js"><link rel="prefetch" href="/assets/js/107.1ba81a97.js"><link rel="prefetch" href="/assets/js/108.1a541803.js"><link rel="prefetch" href="/assets/js/109.315bfc9a.js"><link rel="prefetch" href="/assets/js/11.a1ff2cf2.js"><link rel="prefetch" href="/assets/js/12.655dd338.js"><link rel="prefetch" href="/assets/js/13.bfef087b.js"><link rel="prefetch" href="/assets/js/14.41035e8f.js"><link rel="prefetch" href="/assets/js/15.d9df4c0e.js"><link rel="prefetch" href="/assets/js/16.554ab8a9.js"><link rel="prefetch" href="/assets/js/17.7163bf50.js"><link rel="prefetch" href="/assets/js/18.d336344d.js"><link rel="prefetch" href="/assets/js/19.ba77670c.js"><link rel="prefetch" href="/assets/js/20.caae876a.js"><link rel="prefetch" href="/assets/js/21.922edc5b.js"><link rel="prefetch" href="/assets/js/22.23c1d2f4.js"><link rel="prefetch" href="/assets/js/23.9e7a5763.js"><link rel="prefetch" href="/assets/js/24.d5601925.js"><link rel="prefetch" href="/assets/js/25.86a37e2a.js"><link rel="prefetch" href="/assets/js/26.ada967b3.js"><link rel="prefetch" href="/assets/js/27.a00c1087.js"><link rel="prefetch" href="/assets/js/28.bf893a3b.js"><link rel="prefetch" href="/assets/js/29.b2c0edb9.js"><link rel="prefetch" href="/assets/js/30.f03db177.js"><link rel="prefetch" href="/assets/js/31.034d28eb.js"><link rel="prefetch" href="/assets/js/32.67ef374e.js"><link rel="prefetch" href="/assets/js/33.c29034f0.js"><link rel="prefetch" href="/assets/js/34.d529ba85.js"><link rel="prefetch" href="/assets/js/35.953c40a1.js"><link rel="prefetch" href="/assets/js/36.02f0de0d.js"><link rel="prefetch" href="/assets/js/37.ee635b54.js"><link rel="prefetch" href="/assets/js/38.8d51470b.js"><link rel="prefetch" href="/assets/js/39.a580ca3b.js"><link rel="prefetch" href="/assets/js/40.d1b63bee.js"><link rel="prefetch" href="/assets/js/41.5d130e8f.js"><link rel="prefetch" href="/assets/js/42.80b0e85a.js"><link rel="prefetch" href="/assets/js/43.abf40ae0.js"><link rel="prefetch" href="/assets/js/44.9296494e.js"><link rel="prefetch" href="/assets/js/45.ee2c4a5b.js"><link rel="prefetch" href="/assets/js/46.09e7c3d3.js"><link rel="prefetch" href="/assets/js/47.b961b47d.js"><link rel="prefetch" href="/assets/js/48.c7027d50.js"><link rel="prefetch" href="/assets/js/49.692eb5dc.js"><link rel="prefetch" href="/assets/js/50.96877bf8.js"><link rel="prefetch" href="/assets/js/51.789b91a0.js"><link rel="prefetch" href="/assets/js/52.bc15bde0.js"><link rel="prefetch" href="/assets/js/53.fc67e547.js"><link rel="prefetch" href="/assets/js/54.a500f3e7.js"><link rel="prefetch" href="/assets/js/55.7bd304fd.js"><link rel="prefetch" href="/assets/js/56.1895b188.js"><link rel="prefetch" href="/assets/js/57.d0a45b0b.js"><link rel="prefetch" href="/assets/js/58.eb831659.js"><link rel="prefetch" href="/assets/js/59.7b69914f.js"><link rel="prefetch" href="/assets/js/6.a9fa4fee.js"><link rel="prefetch" href="/assets/js/60.f91a7c7a.js"><link rel="prefetch" href="/assets/js/61.2edf645c.js"><link rel="prefetch" href="/assets/js/62.74627f26.js"><link rel="prefetch" href="/assets/js/63.5616d503.js"><link rel="prefetch" href="/assets/js/64.97ad9a68.js"><link rel="prefetch" href="/assets/js/65.c30ac4e2.js"><link rel="prefetch" href="/assets/js/66.92161f68.js"><link rel="prefetch" href="/assets/js/67.015390fd.js"><link rel="prefetch" href="/assets/js/68.f59ba4ab.js"><link rel="prefetch" href="/assets/js/69.cce46e3d.js"><link rel="prefetch" href="/assets/js/7.8fcade3c.js"><link rel="prefetch" href="/assets/js/70.f1d9927e.js"><link rel="prefetch" href="/assets/js/71.f98067c3.js"><link rel="prefetch" href="/assets/js/72.d40a4594.js"><link rel="prefetch" href="/assets/js/73.2ab5a32e.js"><link rel="prefetch" href="/assets/js/74.d8188538.js"><link rel="prefetch" href="/assets/js/75.98f03565.js"><link rel="prefetch" href="/assets/js/76.b9bd34f7.js"><link rel="prefetch" href="/assets/js/77.22caaf17.js"><link rel="prefetch" href="/assets/js/78.0fb52d3c.js"><link rel="prefetch" href="/assets/js/79.ec478792.js"><link rel="prefetch" href="/assets/js/80.f65d4da1.js"><link rel="prefetch" href="/assets/js/81.83bb8fe2.js"><link rel="prefetch" href="/assets/js/82.0ef7562a.js"><link rel="prefetch" href="/assets/js/83.794b2557.js"><link rel="prefetch" href="/assets/js/84.b16b7ac0.js"><link rel="prefetch" href="/assets/js/85.5795dae6.js"><link rel="prefetch" href="/assets/js/86.ec5d009b.js"><link rel="prefetch" href="/assets/js/87.8013d815.js"><link rel="prefetch" href="/assets/js/88.842959bf.js"><link rel="prefetch" href="/assets/js/89.c2de1543.js"><link rel="prefetch" href="/assets/js/9.98029025.js"><link rel="prefetch" href="/assets/js/90.cd6f428e.js"><link rel="prefetch" href="/assets/js/91.cbd16a63.js"><link rel="prefetch" href="/assets/js/92.1cfcc965.js"><link rel="prefetch" href="/assets/js/93.743809be.js"><link rel="prefetch" href="/assets/js/94.a6b2a489.js"><link rel="prefetch" href="/assets/js/95.16c48846.js"><link rel="prefetch" href="/assets/js/96.5f8183b2.js"><link rel="prefetch" href="/assets/js/97.20f56faa.js"><link rel="prefetch" href="/assets/js/98.7e03e271.js"><link rel="prefetch" href="/assets/js/99.9a823734.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.2b48bf23.js"><link rel="prefetch" href="/assets/js/vendors~notification.14a64265.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9e97db6a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">苹果cmsV10</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/plugin/" class="nav-link">
+  插件
+</a></div><div class="nav-item"><a href="/theme/" class="nav-link">
+  模板
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="了解更多" class="mobile-dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/api/collect.html" class="nav-link">
+  采集接口
+</a></li><li class="dropdown-subitem"><a href="/api/web-design.html" class="nav-link">
+  前端接口
+</a></li></ul></li><li class="dropdown-item"><h4>
+          站长手册
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webmaster/template.html" class="nav-link">
+  买模板
+</a></li><li class="dropdown-subitem"><a href="/webmaster/server.html" class="nav-link">
+  服务器
+</a></li><li class="dropdown-subitem"><a href="/webmaster/ads.html" class="nav-link">
+  广告联盟
+</a></li><li class="dropdown-subitem"><a href="/faq/" class="nav-link">
+  常见问题
+</a></li><li class="dropdown-subitem"><a href="/webmaster/glossary.html" class="nav-link">
+  行业术语
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webmaster/migration-guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  其他cms转苹果cms
+</a></li><li class="dropdown-subitem"><a href="/webmaster/transfer.html" class="nav-link">
+  网站搬家
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="v10.x" class="dropdown-title"><span class="title">v10.x</span> <span class="arrow down"></span></button> <button type="button" aria-label="v10.x" class="mobile-dropdown-title"><span class="title">v10.x</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link">
+  v10.x
+</a></li><li class="dropdown-item"><!----> <a href="https://www.maccms.la/doc/v8/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  v8.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="选择语言" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="选择语言" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webmaster/migration-guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/tc/webmaster/migration-guide.html" class="nav-link">
+  繁體中文
+</a></li></ul></div></div> <a href="https://github.com/magicblack/maccms10" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/plugin/" class="nav-link">
+  插件
+</a></div><div class="nav-item"><a href="/theme/" class="nav-link">
+  模板
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="了解更多" class="mobile-dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/api/collect.html" class="nav-link">
+  采集接口
+</a></li><li class="dropdown-subitem"><a href="/api/web-design.html" class="nav-link">
+  前端接口
+</a></li></ul></li><li class="dropdown-item"><h4>
+          站长手册
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webmaster/template.html" class="nav-link">
+  买模板
+</a></li><li class="dropdown-subitem"><a href="/webmaster/server.html" class="nav-link">
+  服务器
+</a></li><li class="dropdown-subitem"><a href="/webmaster/ads.html" class="nav-link">
+  广告联盟
+</a></li><li class="dropdown-subitem"><a href="/faq/" class="nav-link">
+  常见问题
+</a></li><li class="dropdown-subitem"><a href="/webmaster/glossary.html" class="nav-link">
+  行业术语
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webmaster/migration-guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  其他cms转苹果cms
+</a></li><li class="dropdown-subitem"><a href="/webmaster/transfer.html" class="nav-link">
+  网站搬家
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="v10.x" class="dropdown-title"><span class="title">v10.x</span> <span class="arrow down"></span></button> <button type="button" aria-label="v10.x" class="mobile-dropdown-title"><span class="title">v10.x</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link">
+  v10.x
+</a></li><li class="dropdown-item"><!----> <a href="https://www.maccms.la/doc/v8/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  v8.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="选择语言" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="选择语言" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webmaster/migration-guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/tc/webmaster/migration-guide.html" class="nav-link">
+  繁體中文
+</a></li></ul></div></div> <a href="https://github.com/magicblack/maccms10" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>从其他cms迁移苹果cms</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/webmaster/migration-guide.html#海洋cms转苹果cms" class="sidebar-link">海洋cms转苹果CMS</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/webmaster/migration-guide.html#飞飞cms转苹果cms" class="sidebar-link">飞飞cms转苹果CMS</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="从其他cms迁移苹果cms"><a href="#从其他cms迁移苹果cms" class="header-anchor">#</a> 从其他cms迁移苹果cms</h1> <h2 id="海洋cms转苹果cms"><a href="#海洋cms转苹果cms" class="header-anchor">#</a> 海洋cms转苹果CMS</h2> <h2 id="飞飞cms转苹果cms"><a href="#飞飞cms转苹果cms" class="header-anchor">#</a> 飞飞cms转苹果CMS</h2></div> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="bsa-cpc-wrapper"><div class="bsa-cpc"></div></div></main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.e58eea56.js" defer></script><script src="/assets/js/5.29a4c170.js" defer></script><script src="/assets/js/4.9ebf53b1.js" defer></script><script src="/assets/js/105.a5484a46.js" defer></script><script src="/assets/js/8.a78a9654.js" defer></script>
+  </body>
+</html>
